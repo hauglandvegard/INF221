@@ -1,0 +1,36 @@
+cabal-version:      2.4
+name:               Project
+version:            0.1.0.0
+
+-- license:
+author:             Vegard Haugland
+maintainer:         hauglandvegard@gmail.com
+
+executable Project
+    main-is: Main.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules: 
+        Game.Gameloop, 
+        Game.Model.MyState,
+        Game.Model.CommandParser,
+        Game.View.Formatting,
+        Game.View.View,
+        Tools.Grid,
+        Game.Model.Character,
+        Game.Model.Item,
+        Game.Model.Room
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    
+        base ^>=4.16.4.0,
+        haskeline,
+        mtl, 
+        array,
+        directory,
+        containers,
+        filepath
+
+    hs-source-dirs: app
+    default-language: Haskell2010
